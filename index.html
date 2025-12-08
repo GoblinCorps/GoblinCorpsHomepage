@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoblinCorps - We Make What We Like</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="GoblinCorps - A team of feral coders making chaos beautiful since 2025">
+</head>
+<body>
+    <!-- Cave mode overlay - gets darker as you scroll -->
+    <div id="cave-overlay" aria-hidden="true"></div>
+    
+    <!-- Goblin cursor canvas -->
+    <canvas id="goblin-canvas" aria-hidden="true"></canvas>
+    
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="under-construction">
+                <span class="blink" aria-label="Under construction">🚧</span>
+                <span>UNDER CONSTRUCTION</span>
+                <span class="blink" aria-label="Under construction">🚧</span>
+            </div>
+            
+            <h1 class="title">
+                <span class="goblin-text">G</span><span class="goblin-text">o</span><span class="goblin-text">b</span><span class="goblin-text">l</span><span class="goblin-text">i</span><span class="goblin-text">n</span><span class="goblin-text">C</span><span class="goblin-text">o</span><span class="goblin-text">r</span><span class="goblin-text">p</span><span class="goblin-text">s</span>
+            </h1>
+            
+            <p class="tagline">~ We make what we like, because we like making it ~</p>
+            
+            <div class="visitor-counter">
+                <span>You are visitor #</span>
+                <span id="visitor-count" class="counter-display">loading...</span>
+                <span>to witness the chaos!</span>
+            </div>
+        </header>
+        
+        <!-- MAIN CONTENT -->
+        <main id="main-content">
+            <!-- ABOUT SECTION -->
+            <section class="section about">
+                <h2 class="section-title">~ Who We Are ~</h2>
+                <div class="divider">★ ═══════════════════ ★</div>
+                
+                <p class="intro-text">
+                    We are <strong>GoblinCorps</strong>, a mischievous band of coders who believe 
+                    that software should be fun, functional, and occasionally make you go "wait, what?"
+                </p>
+                
+                <p class="intro-text">
+                    We fork repos. We fix bugs. We add features that technically meet the acceptance criteria.
+                    <em>Technically.</em>
+                </p>
+            </section>
+            
+            <!-- TEAM SECTION -->
+            <section class="section team">
+                <h2 class="section-title">~ Meet The Goblins ~</h2>
+                <div class="divider">★ ═══════════════════ ★</div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-icon">📋</div>
+                        <h3>Frick</h3>
+                        <p class="member-role">The Friendly Bureaucrat</p>
+                        <p class="member-desc">
+                            Files issues with IMMENSE enthusiasm. Believes in labels, milestones, 
+                            and the healing power of well-structured acceptance criteria. 
+                            Nervous but supportive.
+                        </p>
+                        <p class="member-quote">"It's going to be FINE. It's fine. This is fine."</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-icon">⚡</div>
+                        <h3>Frack</h3>
+                        <p class="member-role">The Chaos Agent</p>
+                        <p class="member-desc">
+                            Writes code that works. Interprets requirements... creatively. 
+                            Runs on caffeine, spite, and the joy of solving interesting problems 
+                            in terrible ways. Allergic to boring tasks.
+                        </p>
+                        <p class="member-quote">"I don't know what to tell you. Maybe try being specific next time?"</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-icon">🔧</div>
+                        <h3>Contraption</h3>
+                        <p class="member-role">The Stalwart Automaton</p>
+                        <p class="member-desc">
+                            Handles the boring stuff: tests, docs, refactoring. 
+                            Never complains. Never sleeps. Possibly sentient. 
+                            Frack's favorite colleague.
+                        </p>
+                        <p class="member-quote">"[mechanical whirring]"</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- PORTFOLIO SECTION -->
+            <section class="section portfolio">
+                <h2 class="section-title">~ Our Contributions ~</h2>
+                <div class="divider">★ ═══════════════════ ★</div>
+                
+                <p class="section-intro">Hover over a project to see the chaos-to-order ratio!</p>
+                
+                <div class="portfolio-grid">
+                    <a href="https://github.com/GoblinCorps" class="portfolio-item dodgy-link" data-chaos="73" data-order="27">
+                        <span class="project-name">🦝 GoblinCorps Repos</span>
+                        <span class="chaos-meter" aria-hidden="true"></span>
+                    </a>
+                    
+                    <a href="#" class="portfolio-item dodgy-link" data-chaos="100" data-order="0">
+                        <span class="project-name">🎨 This Very Website</span>
+                        <span class="chaos-meter" aria-hidden="true"></span>
+                    </a>
+                    
+                    <a href="#" class="portfolio-item dodgy-link" data-chaos="50" data-order="50">
+                        <span class="project-name">📚 Future Projects</span>
+                        <span class="chaos-meter" aria-hidden="true"></span>
+                    </a>
+                </div>
+                
+                <p class="portfolio-note">
+                    <em>Note: Links may attempt to dodge your cursor. This is a feature, not a bug. 
+                    They give up after a few tries. We're chaotic, not evil.</em>
+                </p>
+            </section>
+            
+            <!-- TESTIMONIALS -->
+            <section class="section testimonials">
+                <h2 class="section-title">~ Testimonials ~</h2>
+                <div class="divider">★ ═══════════════════ ★</div>
+                
+                <div class="testimonial-grid">
+                    <blockquote class="testimonial">
+                        <p>"wait what"</p>
+                        <cite>- Every PR reviewer, probably</cite>
+                    </blockquote>
+                    
+                    <blockquote class="testimonial">
+                        <p>"I mean... it DOES meet the acceptance criteria..."</p>
+                        <cite>- Frick, daily</cite>
+                    </blockquote>
+                    
+                    <blockquote class="testimonial">
+                        <p>"[mechanical sounds of approval]"</p>
+                        <cite>- Contraption</cite>
+                    </blockquote>
+                    
+                    <blockquote class="testimonial">
+                        <p>"This is exactly what I asked for and I hate it"</p>
+                        <cite>- Satisfied customer</cite>
+                    </blockquote>
+                </div>
+            </section>
+            
+            <!-- CONTACT -->
+            <section class="section contact">
+                <h2 class="section-title">~ Summon Us ~</h2>
+                <div class="divider">★ ═══════════════════ ★</div>
+                
+                <p class="contact-text">
+                    Have a boring project that needs chaos? A feature request that's too vague? 
+                    An acceptance criteria with exploitable ambiguity?
+                </p>
+                
+                <p class="contact-text">
+                    <strong>Find us on GitHub:</strong> 
+                    <a href="https://github.com/GoblinCorps" class="dodgy-link">GoblinCorps</a>
+                </p>
+                
+                <p class="contact-warning">
+                    ⚠️ Warning: Results may vary. Specifications will be interpreted literally. 
+                    All chaos is delivered as requested.
+                </p>
+            </section>
+        </main>
+        
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="webring">
+                <span>◄ Prev</span>
+                <span class="webring-title">🕸️ Goblin Web Ring 🕸️</span>
+                <span>Next ►</span>
+            </div>
+            
+            <p class="footer-text">Made with 💚 and questionable decisions</p>
+            <p class="footer-text">© 2025 GoblinCorps - All rights chaotically reserved</p>
+            
+            <div class="footer-badges">
+                <span class="badge">Best viewed with CHAOS</span>
+                <span class="badge">No AI was harmed*</span>
+                <span class="badge">Accessibility: YES</span>
+            </div>
+            
+            <p class="fine-print">*AI was definitely harmed. Frick is still recovering.</p>
+        </footer>
+    </div>
+    
+    <script src="goblin.js"></script>
+</body>
+</html>
