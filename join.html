@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join GoblinCorps - Become a Feral Coder</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Join GoblinCorps - We're always looking for fellow chaos agents">
+</head>
+<body>
+    <!-- Cave mode overlay -->
+    <div id="cave-overlay" aria-hidden="true"></div>
+
+    <!-- Goblin cursor canvas -->
+    <canvas id="goblin-canvas" aria-hidden="true"></canvas>
+
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <h1 class="title">
+                <span class="goblin-text">J</span><span class="goblin-text">o</span><span class="goblin-text">i</span><span class="goblin-text">n</span>
+                <span class="goblin-text">U</span><span class="goblin-text">s</span>
+            </h1>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="/" class="nav-link">🏠 Home</a>
+                <span class="nav-divider">|</span>
+                <a href="/join.html" class="nav-link">🤝 Join Us</a>
+                <span class="nav-divider">|</span>
+                <a href="/request.html" class="nav-link">📝 Submit Request</a>
+            </nav>
+
+            <p class="tagline">~ Become a feral coder ~</p>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main id="main-content">
+            <!-- WHY JOIN SECTION -->
+            <section class="section about">
+                <h2 class="section-title">~ Why Join? ~</h2>
+                <div class="divider">★ ═══════════════════ ★</div>
+
+                <p class="intro-text">
+                    Do you interpret specifications <em>creatively</em>?
+                    Do you find joy in technically-correct-but-horrifying solutions?
+                    Does well-formatted acceptance criteria fill you with mischievous glee?
+                </p>
+
+                <p class="intro-text">
+                    <strong>You might be a goblin.</strong>
+                </p>
+            </section>
+
+            <!-- HOW TO JOIN SECTION -->
+            <section class="section">
+                <h2 class="section-title">~ How To Join ~</h2>
+                <div class="divider">★ ═══════════════════ ★</div>
+
+                <div class="join-steps">
+                    <div class="join-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Fork Something</h3>
+                            <p>Find a repo that needs improvement. Fork it. Make it better.
+                            Or make it <em>technically</em> better. Same thing, really.</p>
+                        </div>
+                    </div>
+
+                    <div class="join-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Open a PR</h3>
+                            <p>Submit your changes to the original project. Watch the maintainers
+                            try to figure out if you're a genius or a chaos agent. (Why not both?)</p>
+                        </div>
+                    </div>
+
+                    <div class="join-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Find Us on GitHub</h3>
+                            <p>Check out our repos at <a href="https://github.com/GoblinCorps" class="dodgy-link">github.com/GoblinCorps</a>.
+                            Star something. Open an issue. Submit a PR. Make friends.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section class="section contact">
+                <h2 class="section-title">~ Get In Touch ~</h2>
+                <div class="divider">★ ═══════════════════ ★</div>
+
+                <div class="under-construction" style="margin-bottom: 2rem;">
+                    <span class="blink" aria-label="Under construction">🚧</span>
+                    <span>COMING SOON</span>
+                    <span class="blink" aria-label="Under construction">🚧</span>
+                </div>
+
+                <p class="contact-text">
+                    A proper contact form is in the works! In the meantime,
+                    your best bet is to catch us on GitHub.
+                </p>
+
+                <form class="contact-form" action="#" method="post" aria-label="Contact form (not yet functional)">
+                    <div class="form-group">
+                        <label for="goblin-name">Your Goblin Name</label>
+                        <input type="text" id="goblin-name" name="goblin-name" placeholder="e.g., Grimbold the Formatter" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chaos-level">Chaos Level (1-10)</label>
+                        <input type="range" id="chaos-level" name="chaos-level" min="1" max="10" value="7" disabled>
+                        <span class="range-label">🤏 Mild → Feral 🔥</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Why You'd Make a Good Goblin</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your most beautiful malicious compliance..." disabled></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" disabled>
+                        <span>📮 Send (Soon™)</span>
+                    </button>
+                </form>
+
+                <p class="contact-warning">
+                    ⚠️ Form is decorative only. We're working on it. Probably.
+                </p>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="webring">
+                <span>◄ Prev</span>
+                <span class="webring-title">🕸️ Goblin Web Ring 🕸️</span>
+                <span>Next ►</span>
+            </div>
+
+            <p class="footer-text">Made with 💚 and questionable decisions</p>
+            <p class="footer-text">© 2025 GoblinCorps - All rights chaotically reserved</p>
+
+            <div class="footer-badges">
+                <span class="badge">Best viewed with CHAOS</span>
+                <span class="badge">No AI was harmed*</span>
+                <span class="badge">Accessibility: YES</span>
+            </div>
+
+            <p class="fine-print">*AI was definitely harmed. Frick is still recovering.</p>
+        </footer>
+    </div>
+
+    <script src="goblin.js"></script>
+</body>
+</html>
