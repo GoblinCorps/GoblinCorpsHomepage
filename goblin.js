@@ -439,9 +439,102 @@
     }
 
     // ═══════════════════════════════════════════════════════════════
+    // PROJECT RENDERER
+    // Renders the portfolio grid from PROJECTS data
+    // ═══════════════════════════════════════════════════════════════
+
+    class ProjectRenderer {
+        constructor(containerId) {
+            this.container = document.getElementById(containerId);
+            if (this.container) {
+                this.render();
+            }
+        }
+
+        render() {
+            // Separate featured and regular projects
+            const featured = PROJECTS.filter(p => p.featured);
+            const regular = PROJECTS.filter(p => !p.featured);
+
+            let html = '';
+
+            // Render featured projects first (larger cards)
+            if (featured.length > 0) {
+                html += '<div class="portfolio-featured">';
+                featured.forEach(project => {
+                    html += this.renderFeaturedCard(project);
+                });
+                html += '</div>';
+            }
+
+            // Render regular projects in a responsive grid
+            if (regular.length > 0) {
+                html += '<div class="portfolio-grid">';
+                regular.forEach(project => {
+                    html += this.renderCard(project);
+                });
+                html += '</div>';
+            }
+
+            this.container.innerHTML = html;
+        }
+
+        renderFeaturedCard(project) {
+            const statusBadge = this.getStatusBadge(project.status);
+            const highlights = project.highlights.length > 0
+                ? `<ul class="project-highlights">${project.highlights.map(h => `<li>${h}</li>`).join('')}</ul>`
+                : '';
+            const upstream = project.upstream
+                ? `<a href="${project.upstream}" class="upstream-link" title="Original repo">↗ upstream</a>`
+                : '';
+
+            return `
+                <a href="${project.url}" class="portfolio-item portfolio-item--featured dodgy-link"
+                   data-chaos="${project.chaos}" data-order="${project.order}">
+                    <div class="project-header">
+                        <span class="project-icon">${project.icon}</span>
+                        <div class="project-title-group">
+                            <span class="project-name">${project.name}</span>
+                            <span class="project-tagline">${project.tagline}</span>
+                        </div>
+                        ${statusBadge}
+                    </div>
+                    <p class="project-description">${project.description}</p>
+                    ${highlights}
+                    <div class="project-footer">
+                        <span class="project-team">Team: ${project.team.join(', ')}</span>
+                        ${upstream}
+                    </div>
+                    <span class="chaos-meter" aria-hidden="true"></span>
+                </a>
+            `;
+        }
+
+        renderCard(project) {
+            return `
+                <a href="${project.url}" class="portfolio-item dodgy-link"
+                   data-chaos="${project.chaos}" data-order="${project.order}">
+                    <span class="project-name">${project.icon} ${project.name}</span>
+                    <span class="chaos-meter" aria-hidden="true"></span>
+                </a>
+            `;
+        }
+
+        getStatusBadge(status) {
+            const badges = {
+                'active': '<span class="status-badge status-badge--active">🟢 Active</span>',
+                'complete': '<span class="status-badge status-badge--complete">✅ Complete</span>',
+                'archived': '<span class="status-badge status-badge--archived">📦 Archived</span>',
+                'eternal': '<span class="status-badge status-badge--eternal">♾️ Eternal</span>'
+            };
+            return badges[status] || '';
+        }
+    }
+
+    // ═══════════════════════════════════════════════════════════════
     // CHAOS METER (Portfolio items)
     // ═══════════════════════════════════════════════════════════════
-    
+
     class ChaosMeter {
         constructor() {
             this.items = document.querySelectorAll('.portfolio-item');
@@ -453,7 +546,7 @@
                 const chaos = parseInt(item.dataset.chaos) || 50;
                 const order = parseInt(item.dataset.order) || 50;
                 const meter = item.querySelector('.chaos-meter');
-                
+
                 if (meter) {
                     meter.style.setProperty('--order-percent', `${order}%`);
                     meter.setAttribute('data-label', `Order: ${order}% | Chaos: ${chaos}%`);
@@ -490,6 +583,10 @@
             new VisitorCounter(counterElement);
         }
 
+        // Render projects from data (must come before ChaosMeter)
+        new ProjectRenderer('portfolio-container');
+
+        // Initialize chaos meters on rendered portfolio items
         new ChaosMeter();
 
         // Console easter egg

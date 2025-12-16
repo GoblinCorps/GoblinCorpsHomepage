@@ -113,33 +113,19 @@
             <section class="section portfolio">
                 <h2 class="section-title">~ Our Contributions ~</h2>
                 <div class="divider">★ ═══════════════════ ★</div>
-                
+
                 <p class="section-intro">Hover over a project to see the chaos-to-order ratio!</p>
-                
-                <div class="portfolio-grid">
-                    <a href="https://github.com/GoblinCorps" class="portfolio-item dodgy-link" data-chaos="73" data-order="27">
-                        <span class="project-name">🦝 GoblinCorps Repos</span>
-                        <span class="chaos-meter" aria-hidden="true"></span>
-                    </a>
 
-                    <a href="/match/" class="portfolio-item dodgy-link" data-chaos="42" data-order="58">
-                        <span class="project-name">💘 GoblinMatch</span>
-                        <span class="chaos-meter" aria-hidden="true"></span>
-                    </a>
-
-                    <a href="/labeler/" class="portfolio-item dodgy-link" data-chaos="65" data-order="35">
-                        <span class="project-name">🏷️ NLI Span Labeler</span>
-                        <span class="chaos-meter" aria-hidden="true"></span>
-                    </a>
-
-                    <a href="https://goblincorps.com" class="portfolio-item dodgy-link" data-chaos="100" data-order="0">
-                        <span class="project-name">🎨 This Very Website</span>
-                        <span class="chaos-meter" aria-hidden="true"></span>
-                    </a>
+                <!-- Projects rendered dynamically from PROJECTS data in goblin.js -->
+                <div id="portfolio-container">
+                    <!-- Loading fallback for no-JS -->
+                    <noscript>
+                        <p>Enable JavaScript to see our chaotic project list!</p>
+                    </noscript>
                 </div>
-                
+
                 <p class="portfolio-note">
-                    <em>Note: Links may attempt to dodge your cursor. This is a feature, not a bug. 
+                    <em>Note: Links may attempt to dodge your cursor. This is a feature, not a bug.
                     They give up after a few tries. We're chaotic, not evil.</em>
                 </p>
             </section>
