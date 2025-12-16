@@ -46,6 +46,102 @@
     };
 
     // ═══════════════════════════════════════════════════════════════
+    // PROJECTS DATA
+    // Adding a new project? Just add an entry here!
+    // ═══════════════════════════════════════════════════════════════
+
+    const PROJECTS = [
+        {
+            id: 'goblin-forge',
+            name: 'Goblin Forge',
+            icon: '🔨',
+            tagline: 'Multi-agent CLI orchestrator',
+            description: 'Coordinate multiple AI coding agents in parallel with tmux isolation and git worktrees.',
+            url: 'https://github.com/GoblinCorps/goblin-forge',
+            upstream: 'https://github.com/astoreyai/goblin-forge',
+            status: 'active',
+            chaos: 58,
+            order: 42,
+            highlights: [
+                'MCP server with 8 orchestration tools',
+                'Crush + Claude Code integration',
+                'Bulletproof tmux layer'
+            ],
+            team: ['Frick', 'Frack', 'Contraption'],
+            featured: true
+        },
+        {
+            id: 'nli-span-labeler',
+            name: 'NLI Span Labeler',
+            icon: '🏷️',
+            tagline: 'Interactive annotation tool',
+            description: 'Browser-based tool for labeling text spans with natural language inference.',
+            url: '/labeler/',
+            upstream: 'https://github.com/Wikipedia-NLI/nli-span-labeler',
+            status: 'active',
+            chaos: 65,
+            order: 35,
+            highlights: [
+                'Real-time annotation preview',
+                'Export to multiple formats',
+                'Collaborative labeling support'
+            ],
+            team: ['Frack', 'Contraption'],
+            featured: false
+        },
+        {
+            id: 'goblin-match',
+            name: 'GoblinMatch',
+            icon: '💘',
+            tagline: 'Find your goblin',
+            description: 'A personality quiz to discover which GoblinCorps member you are most like.',
+            url: '/match/',
+            status: 'complete',
+            chaos: 42,
+            order: 58,
+            highlights: [
+                'Scientifically questionable methodology',
+                'Results may vary',
+                'No refunds'
+            ],
+            team: ['Frick'],
+            featured: false
+        },
+        {
+            id: 'goblincorps-homepage',
+            name: 'This Very Website',
+            icon: '🎨',
+            tagline: 'Peak geocities energy',
+            description: 'The homepage you are looking at right now. Yes, we made it weird on purpose.',
+            url: 'https://goblincorps.com',
+            status: 'eternal',
+            chaos: 100,
+            order: 0,
+            highlights: [
+                'Dodging links',
+                'Cave mode',
+                'Goblin cursor follower'
+            ],
+            team: ['Frick', 'Frack', 'Contraption'],
+            featured: false
+        },
+        {
+            id: 'goblincorps-repos',
+            name: 'GoblinCorps Repos',
+            icon: '🦝',
+            tagline: 'All our chaos in one place',
+            description: 'The full collection of GoblinCorps repositories on GitHub.',
+            url: 'https://github.com/GoblinCorps',
+            status: 'active',
+            chaos: 73,
+            order: 27,
+            highlights: [],
+            team: ['Frick', 'Frack', 'Contraption'],
+            featured: false
+        }
+    ];
+
+    // ═══════════════════════════════════════════════════════════════
     // UTILITY FUNCTIONS
     // ═══════════════════════════════════════════════════════════════
     
