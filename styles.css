@@ -504,13 +504,29 @@ body::before {
     border-top: 1px solid var(--goblin-dark-green);
 }
 
+.portfolio-item--featured .project-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.portfolio-item--featured .project-link {
+    color: var(--goblin-green);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.portfolio-item--featured .project-link:hover {
+    color: var(--goblin-gold);
+}
+
 .portfolio-item--featured .upstream-link {
-    color: var(--link-color);
+    color: var(--text-secondary);
     font-size: 0.8rem;
 }
 
 .portfolio-item--featured .upstream-link:hover {
-    color: var(--goblin-green);
+    color: var(--link-color);
 }
 
 /* Status badges */

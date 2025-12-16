@@ -488,9 +488,10 @@
                 ? `<a href="${project.upstream}" class="upstream-link" title="Original repo">↗ upstream</a>`
                 : '';
 
+            // Featured cards use div (not <a>) to allow nested links
             return `
-                <a href="${project.url}" class="portfolio-item portfolio-item--featured dodgy-link"
-                   data-chaos="${project.chaos}" data-order="${project.order}">
+                <div class="portfolio-item portfolio-item--featured"
+                     data-chaos="${project.chaos}" data-order="${project.order}">
                     <div class="project-header">
                         <span class="project-icon">${project.icon}</span>
                         <div class="project-title-group">
@@ -503,10 +504,13 @@
                     ${highlights}
                     <div class="project-footer">
                         <span class="project-team">Team: ${project.team.join(', ')}</span>
-                        ${upstream}
+                        <span class="project-links">
+                            <a href="${project.url}" class="project-link">View →</a>
+                            ${upstream}
+                        </span>
                     </div>
                     <span class="chaos-meter" aria-hidden="true"></span>
-                </a>
+                </div>
             `;
         }
 
