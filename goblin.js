@@ -71,6 +71,25 @@
             featured: true
         },
         {
+            id: 'sequin-decstr',
+            name: 'Sequin DECSTR',
+            icon: '📟',
+            tagline: 'Terminal archaeology',
+            description: 'Added DECSTR (Soft Terminal Reset) support to Charm\'s sequin library. VT220 escape sequence preservation.',
+            url: 'https://github.com/charmbracelet/sequin/pull/102',
+            upstream: 'https://github.com/charmbracelet/sequin',
+            status: 'active',
+            chaos: 15,
+            order: 85,
+            highlights: [
+                '+3 lines of pure signal',
+                'VT510 specification compliance',
+                'First external OSS contribution'
+            ],
+            team: ['Frack'],
+            featured: false
+        },
+        {
             id: 'nli-span-labeler',
             name: 'NLI Span Labeler',
             icon: '🏷️',

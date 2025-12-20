@@ -604,6 +604,164 @@ body::before {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   TERMINAL ARCHAEOLOGY
+   ═══════════════════════════════════════════════════════════════ */
+
+.archaeology-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.archaeology-item {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--goblin-dark-green);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.archaeology-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: rgba(46, 204, 113, 0.1);
+    border-bottom: 1px solid var(--goblin-dark-green);
+}
+
+.archaeology-code {
+    font-family: 'Courier New', monospace;
+    background: var(--cave-black);
+    color: var(--goblin-green);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.archaeology-header h3 {
+    margin: 0;
+    flex: 1;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.archaeology-era {
+    color: var(--goblin-gold);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.archaeology-body {
+    padding: 1.5rem;
+}
+
+.archaeology-tldr {
+    margin: 0 0 1rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.archaeology-details {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.archaeology-details summary {
+    cursor: pointer;
+    color: var(--goblin-green);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.archaeology-details[open] summary {
+    margin-bottom: 1rem;
+}
+
+.archaeology-details h4 {
+    color: var(--goblin-gold);
+    margin: 1.5rem 0 0.5rem;
+    font-size: 0.95rem;
+}
+
+.archaeology-details h4:first-of-type {
+    margin-top: 0.5rem;
+}
+
+.archaeology-specs {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.archaeology-specs li {
+    margin-bottom: 0.25rem;
+}
+
+.archaeology-specs code {
+    background: var(--cave-black);
+    color: var(--goblin-green);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+}
+
+.archaeology-source {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.archaeology-source a {
+    color: var(--link-color);
+}
+
+.archaeology-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid var(--goblin-dark-green);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.archaeology-footer a {
+    color: var(--goblin-green);
+}
+
+.archaeology-footer a:hover {
+    color: var(--goblin-gold);
+}
+
+.archaeology-note {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .archaeology-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .archaeology-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
    TESTIMONIALS
    ═══════════════════════════════════════════════════════════════ */
 

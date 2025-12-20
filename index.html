@@ -129,7 +129,87 @@
                     They give up after a few tries. We're chaotic, not evil.</em>
                 </p>
             </section>
-            
+
+            <!-- TERMINAL ARCHAEOLOGY SECTION -->
+            <section class="section archaeology">
+                <h2 class="section-title">~ Terminal Archaeology ~</h2>
+                <div class="divider">★ ═══════════════════ ★</div>
+
+                <p class="section-intro">
+                    Sometimes we dig up ancient terminal escape sequences and bring them back to life.
+                    Here's what we've unearthed so far.
+                </p>
+
+                <div class="archaeology-grid">
+                    <article class="archaeology-item">
+                        <div class="archaeology-header">
+                            <span class="archaeology-code">CSI ! p</span>
+                            <h3>DECSTR - Soft Terminal Reset</h3>
+                            <span class="archaeology-era">VT220+ (1983)</span>
+                        </div>
+
+                        <div class="archaeology-body">
+                            <p class="archaeology-tldr">
+                                <strong>The short version:</strong> When your terminal gets into a weird state
+                                (wrong colors, cursor invisible, text garbled), DECSTR resets everything
+                                back to normal <em>without</em> clearing the screen.
+                            </p>
+
+                            <details class="archaeology-details">
+                                <summary>The archaeological details</summary>
+
+                                <p>
+                                    DECSTR (Soft Terminal Reset) is an escape sequence from the DEC VT220 era,
+                                    standardized in the VT510 specification. It resets terminal state to defaults
+                                    while preserving screen contents.
+                                </p>
+
+                                <h4>Escape Sequence</h4>
+                                <ul class="archaeology-specs">
+                                    <li><strong>7-bit:</strong> <code>ESC [ ! p</code> (hex: <code>1B 5B 21 70</code>)</li>
+                                    <li><strong>8-bit:</strong> <code>CSI ! p</code> (hex: <code>9B 21 70</code>)</li>
+                                </ul>
+
+                                <h4>What It Resets</h4>
+                                <p>DECSTR resets 18 terminal modes to their defaults:</p>
+                                <ul class="archaeology-specs">
+                                    <li>Text cursor (DECTCEM) - Enabled</li>
+                                    <li>Insert/replace (IRM) - Replace mode</li>
+                                    <li>Origin mode (DECOM) - Absolute</li>
+                                    <li>Autowrap (DECAWM) - Disabled</li>
+                                    <li>Numeric keypad (DECNKM) - Numeric</li>
+                                    <li>Cursor keys (DECCKM) - Normal arrows</li>
+                                    <li>Scroll margins (DECSTBM) - Full screen</li>
+                                    <li>Character sets (G0-G3, GL, GR) - Defaults</li>
+                                    <li>Text rendition (SGR) - Normal</li>
+                                    <li>...and 9 more obscure modes</li>
+                                </ul>
+
+                                <h4>Soft vs Hard Reset</h4>
+                                <p>
+                                    Unlike RIS (hard reset), DECSTR doesn't clear the screen or reset
+                                    communication settings. It's the "fix my terminal" button that doesn't
+                                    destroy your scrollback.
+                                </p>
+
+                                <p class="archaeology-source">
+                                    Source: <a href="https://vt100.net/docs/vt510-rm/DECSTR.html" target="_blank" rel="noopener">VT510 Programmer Reference</a>
+                                </p>
+                            </details>
+                        </div>
+
+                        <div class="archaeology-footer">
+                            <span class="archaeology-status">Contributed to <a href="https://github.com/charmbracelet/sequin/pull/102">charmbracelet/sequin PR #102</a></span>
+                            <span class="archaeology-team">Team: Frack</span>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="archaeology-note">
+                    <em>More escape sequences await excavation. The VT510 manual has 400+ pages of them.</em>
+                </p>
+            </section>
+
             <!-- TESTIMONIALS -->
             <section class="section testimonials">
                 <h2 class="section-title">~ Testimonials ~</h2>
